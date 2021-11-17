@@ -9,8 +9,11 @@ import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ListView;
 
 import com.google.android.material.navigation.NavigationView;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
 
@@ -24,6 +27,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        ArrayList<group> GroupList = new ArrayList<group>();
+        GroupList.add(new group("asdadsa",Boolean.FALSE));
+
+        ListView listview =(ListView) findViewById(R.id.groups);
+        final groupAdapter GroupAdapter = new groupAdapter(this,GroupList);
+
+        listview.setAdapter(GroupAdapter);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
