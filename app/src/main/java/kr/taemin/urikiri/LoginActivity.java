@@ -35,7 +35,7 @@ public class LoginActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_login);
 
         // 카카오 로그인 셋업
         kakao_login = (Button) findViewById(R.id.kakao_login);
@@ -114,7 +114,7 @@ public class LoginActivity extends Activity {
         Toast.makeText(getApplicationContext(), "로그인 성공", Toast.LENGTH_SHORT).show();
 
         //페이스북 로그인 리턴값이 있을경우 보내준다.
-//        mCallbackManager.onActivityResult(requestCode, resultCode, data);
+        mCallbackManager.onActivityResult(requestCode, resultCode, data);
         super.onActivityResult(requestCode, resultCode, data);
     }
 }
