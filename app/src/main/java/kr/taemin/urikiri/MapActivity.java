@@ -1,6 +1,5 @@
 package kr.taemin.urikiri;
 
-
 import android.Manifest;
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
