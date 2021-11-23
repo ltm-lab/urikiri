@@ -18,8 +18,8 @@
         android:theme="@style/Theme.우리끼리">
         <activity android:name=".MainActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity android:name=".MapActivity">
@@ -29,10 +29,18 @@
             </intent-filter>
         </activity>
         <activity android:name=".SplashActivity" />
-        <activity android:name=".LoginActivity" />
+        <activity android:name=".LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <meta-data
             android:name="com.kakao.sdk.AppKey"
             android:value="ccbe5c8e90038c29dca80f69bd66611b" />
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
     </application>
 
 </manifest>

@@ -45,7 +45,6 @@ public class MapActivity <findViewById> extends AppCompatActivity implements Map
     String[] REQUIRED_PERMISSIONS = {Manifest.permission.ACCESS_FINE_LOCATION};
     public Context context;//getApplicationContext();
 
-
     public static final MapView.CurrentLocationTrackingMode TrackingModeOnWithoutHeading = null;
 
     @SuppressLint("WrongViewCast")
