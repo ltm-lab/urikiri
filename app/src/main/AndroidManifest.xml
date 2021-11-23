@@ -23,10 +23,13 @@
             </intent-filter>
         </activity>
         <activity android:name=".MapActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
         </activity>
         <activity android:name=".SplashActivity" />
-        <activity android:name=".LoginActivity">
-        </activity>
+        <activity android:name=".LoginActivity" />
         <meta-data
             android:name="com.kakao.sdk.AppKey"
             android:value="ccbe5c8e90038c29dca80f69bd66611b" />
