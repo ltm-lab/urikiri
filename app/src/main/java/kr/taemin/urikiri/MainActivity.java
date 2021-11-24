@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Debug;
 import android.util.Log;
@@ -20,6 +21,7 @@ import com.google.android.material.navigation.NavigationView;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
+    public static ArrayList<group> GroupList = new ArrayList<group>();
 
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
@@ -32,22 +34,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         setContentView(R.layout.activity_main);
 
         // 리스트 생성
-        ArrayList<group> GroupList = new ArrayList<group>();
-        GroupList.add(new group("asdadsa",Boolean.FALSE));
-        GroupList.add(new group("asdadsa",Boolean.FALSE));
-        GroupList.add(new group("asdadsa",Boolean.FALSE));
-        GroupList.add(new group("asdadsa",Boolean.FALSE));
-        GroupList.add(new group("asdadsa",Boolean.FALSE));
-        GroupList.add(new group("asdadsa",Boolean.FALSE));
-        GroupList.add(new group("asdadsa",Boolean.FALSE));
-        GroupList.add(new group("asdadsa",Boolean.FALSE));
-        GroupList.add(new group("asdadsa",Boolean.FALSE));
-        GroupList.add(new group("asdadsa",Boolean.FALSE));
-        GroupList.add(new group("asdadsa",Boolean.FALSE));
-        GroupList.add(new group("asdadsa",Boolean.FALSE));
-        GroupList.add(new group("asdadsa",Boolean.FALSE));
-        GroupList.add(new group("asdadsa",Boolean.FALSE));
-        GroupList.add(new group("asdadsa",Boolean.FALSE));
+
+        //GroupList.add(new group("아무것도 하기 싫다",Boolean.FALSE,"잉여를 위한 모임")); DB에서 받아오는 구문 추가
 
         //리스트 뷰 생성
         ListView listview =(ListView) findViewById(R.id.groups);
@@ -66,13 +54,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 // 데이터 수정
-                if(GroupList.get(position).isOn)
-                {
-                    GroupList.set(position,new group("OFF",false));
-                }else
-                {
-                    GroupList.set(position,new group("ON",true));
-                }
+
                 //listView 갱신
                 GroupAdapter.notifyDataSetChanged();
             }
@@ -86,6 +68,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         getSupportActionBar().setTitle("위치공유그룹");
 
+        Button addGroup = (Button) findViewById(R.id.add_group);
         Button buttonOpen = (Button) findViewById(R.id.open) ;
         buttonOpen.setOnClickListener(new Button.OnClickListener() {
             @Override
@@ -96,5 +79,18 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 }
             }
         });
+        addGroup.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View view){
+                Intent intent = new Intent(MainActivity.this,add_group.class);
+                startActivity(intent);
+            }
+        });
+    }
+    @Override
+    protected void onResume() {
+
+        super.onResume();
+
+        //GroupAdapter.notifyDataSetChanged();
     }
 }
