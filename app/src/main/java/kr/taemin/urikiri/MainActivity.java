@@ -29,6 +29,20 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         ArrayList<group> GroupList = new ArrayList<group>();
         GroupList.add(new group("asdadsa",Boolean.FALSE));
+        GroupList.add(new group("asdadsa",Boolean.FALSE));
+        GroupList.add(new group("asdadsa",Boolean.FALSE));
+        GroupList.add(new group("asdadsa",Boolean.FALSE));
+        GroupList.add(new group("asdadsa",Boolean.FALSE));
+        GroupList.add(new group("asdadsa",Boolean.FALSE));
+        GroupList.add(new group("asdadsa",Boolean.FALSE));
+        GroupList.add(new group("asdadsa",Boolean.FALSE));
+        GroupList.add(new group("asdadsa",Boolean.FALSE));
+        GroupList.add(new group("asdadsa",Boolean.FALSE));
+        GroupList.add(new group("asdadsa",Boolean.FALSE));
+        GroupList.add(new group("asdadsa",Boolean.FALSE));
+        GroupList.add(new group("asdadsa",Boolean.FALSE));
+        GroupList.add(new group("asdadsa",Boolean.FALSE));
+        GroupList.add(new group("asdadsa",Boolean.FALSE));
 
         ListView listview =(ListView) findViewById(R.id.groups);
         final groupAdapter GroupAdapter = new groupAdapter(this,GroupList);
@@ -37,7 +51,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        getSupportActionBar().setTitle("                  위치공유그룹");
+        getSupportActionBar().setTitle("위치공유그룹");
 
         Button buttonOpen = (Button) findViewById(R.id.open) ;
         buttonOpen.setOnClickListener(new Button.OnClickListener() {
