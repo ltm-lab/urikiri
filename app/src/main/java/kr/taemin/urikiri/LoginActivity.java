@@ -9,9 +9,7 @@ import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 
-import com.android.volley.RequestQueue;
 import com.android.volley.Response;
-import com.android.volley.toolbox.Volley;
 import com.facebook.CallbackManager;
 import com.facebook.login.LoginManager;
 import com.kakao.auth.AuthType;
@@ -116,9 +114,9 @@ public class LoginActivity extends Activity {
                     }
                 };
 
-                AddGroup addGroup = new AddGroup("타이틀", "서브타이틀", "멤버스1,멤버스2", responseListener);
-                RequestQueue queue = Volley.newRequestQueue(LoginActivity.this);
-                queue.add(addGroup);
+//                AddGroup addGroup = new AddGroup("타이틀", "서브타이틀", "멤버스1,멤버스2", responseListener);
+//                RequestQueue queue = Volley.newRequestQueue(LoginActivity.this);
+//                queue.add(addGroup);
                 Toast.makeText(getApplicationContext(), "토큰 : "+sb, Toast.LENGTH_SHORT).show(); //토스트로 생성된 토큰값을 보여준다.
                 Intent intent=new Intent(LoginActivity.this, MainActivity.class);
                 startActivity(intent);
