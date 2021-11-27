@@ -2,27 +2,36 @@ package kr.taemin.urikiri;
 
 import android.os.Bundle;
 import android.view.Gravity;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.viewpager2.widget.ViewPager2;
 
-import com.google.android.material.navigation.NavigationView;
+public class MainActivity extends AppCompatActivity {
+    DemoCollectionAdapter demoCollectionAdapter;
+    ViewPager2 viewPager;
 
-public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
 
-    @Override
-    public boolean onNavigationItemSelected(MenuItem item) {
-        return true;
-    }
+    private int num =2;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        viewPager = (ViewPager2) findViewById(R.id.viewPager2);
+
+        demoCollectionAdapter = new DemoCollectionAdapter(this, num);
+        viewPager.setAdapter(demoCollectionAdapter);
+
+
+        viewPager.setOrientation(ViewPager2.ORIENTATION_HORIZONTAL);
+
+
 
 //        String keyHash = com.kakao.util.helper.Utility.getKeyHash(this /* context */);
 ////        Log.d("KeyHash : ", keyHash);
