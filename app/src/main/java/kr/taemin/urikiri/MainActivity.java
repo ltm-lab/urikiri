@@ -1,7 +1,6 @@
 package kr.taemin.urikiri;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
@@ -25,8 +24,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        String keyHash = com.kakao.util.helper.Utility.getKeyHash(this /* context */);
-        Log.d("KeyHash : ", keyHash);
+//        String keyHash = com.kakao.util.helper.Utility.getKeyHash(this /* context */);
+////        Log.d("KeyHash : ", keyHash);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
