@@ -23,8 +23,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity"/>
+        <activity android:name=".MainActivity" />
         <activity android:name=".SplashActivity" />
+        <activity android:name=".AddFriendActivity" />
+        <activity android:name=".FriendListActivity" />
         <meta-data
             android:name="com.kakao.sdk.AppKey"
             android:value="ccbe5c8e90038c29dca80f69bd66611b" />
