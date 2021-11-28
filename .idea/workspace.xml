@@ -12,7 +12,18 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="018f7e20-6e8e-41ad-9aa0-f38f7505cc96" name="Default Changelist" comment="" />
+    <list default="true" id="018f7e20-6e8e-41ad-9aa0-f38f7505cc96" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/kr/taemin/urikiri/group.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/kr/taemin/urikiri/groupAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/content_add_group.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/kr/taemin/urikiri/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/kr/taemin/urikiri/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/kr/taemin/urikiri/fragment1.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/kr/taemin/urikiri/fragment1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment1.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,7 +32,7 @@
   <component name="CodeInsightWorkspaceSettings">
     <option name="optimizeImportsOnTheFly" value="true" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[27422cb5b4217ece]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[C:\Users\sanshin\.android\avd\Pixel_2_API_30_1.avd]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -30,10 +41,14 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="layoutResourceFile" />
+        <option value="Class" />
+        <option value="Kotlin Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="213FD6flZY5a1baFhx2LhkVCa09" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -47,7 +62,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../map_API/app/src" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
-  <component name="RunManager" selected="Android App.MapActivity">
+  <component name="RunManager" selected="Android App.app">
     <configuration name="LoginActivity" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false" temporary="true">
       <module name="우리끼리.app" />
       <option name="DEPLOY" value="true" />
@@ -297,5 +312,16 @@
       <updated>1637161741818</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

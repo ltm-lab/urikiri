@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        getSupportActionBar().setTitle("                  위치공유그룹");
+        getSupportActionBar().setTitle("위치공유그룹");
 
         Button buttonOpen = (Button) findViewById(R.id.open) ;
         buttonOpen.setOnClickListener(new Button.OnClickListener() {
