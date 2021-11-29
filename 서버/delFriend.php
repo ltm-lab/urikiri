@@ -16,7 +16,7 @@
 
     $friends = implode(',', $friends);
 
-    mysql_query("UPDATE `users` SET `friends`='$friends' WHERE id = '".mysql_real_escape_string($_POST["userid"])."'")
+    mysql_query("UPDATE `users` SET `friends`='$friends' WHERE id = '".mysql_real_escape_string($_POST["userid"])."'");
 
     $response = array();
     $response["success"] = true;
