@@ -11,6 +11,4 @@ public class group {
         this.subtitle = subtitle;
         this.isOn = isOn;
     }
-
-
 }
