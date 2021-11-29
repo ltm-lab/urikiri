@@ -44,7 +44,7 @@ public class LoginActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        final String userid = getPreferenceString("userid");
+        final String userid = getPreference("userid");
 
         if(!userid.equals("")) {
             Intent intent = new Intent(LoginActivity.this, MainActivity.class);
@@ -165,7 +165,7 @@ public class LoginActivity extends Activity {
     }
 
     // 데이터 불러오기
-    public String getPreferenceString(String key){
+    public String getPreference(String key){
         SharedPreferences pref = getSharedPreferences("kr.taemin.urikiri", MODE_PRIVATE);
         return pref.getString(key, "");
     }
