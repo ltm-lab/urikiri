@@ -24,10 +24,28 @@
             android:layout_height="618dp"
             android:orientation="vertical">
 
-            <ListView
-                android:id="@+id/groups"
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="430dp"
+                android:layout_height="59dp"
+                android:background="#2196F3"
+                android:minHeight="?attr/actionBarSize"
+                android:theme="?attr/actionBarTheme"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView4"
                 android:layout_width="match_parent"
-                android:layout_height="635dp" />
+                android:layout_height="wrap_content"
+                android:text="TextView" />
+
+            <ListView
+                android:id="@android:id/list"
+                android:layout_width="match_parent"
+                android:layout_height="635dp" >
+
+            </ListView>
         </LinearLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
