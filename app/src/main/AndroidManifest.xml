@@ -31,7 +31,6 @@
         <activity android:name=".LoginActivity"/>
         <activity android:name=".MainActivity" />
         <activity android:name=".FriendListActivity" />
-        <activity android:name=".AddFriendActivity" />
 
 
         <meta-data
