@@ -23,7 +23,7 @@
                 android:layout_height="wrap_content"
                 android:text="TextView"
                 android:textSize="30dp"
-                android:textFontWeight="5"/>
+                android:textStyle="bold"/>
 
             <TextView
                 android:id="@+id/textView2"
