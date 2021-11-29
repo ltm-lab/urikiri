@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class serch_UserGroupById extends StringRequest {
-    final static private String URL = " http://urikiri.taemin.kr/groupDB.php";
+    final static private String URL = "http://urikiri.taemin.kr/groupDB.php";
     private Map<String, String> map;
     Response.Listener<String> listener;
 

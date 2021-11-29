@@ -2,6 +2,7 @@ package kr.taemin.urikiri;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -100,7 +101,6 @@ public class LoginActivity extends Activity {
                     @Override
                     public void onResponse(String response) {
                         try {
-
                             JSONObject jsonResponse = new JSONObject(response);
                             boolean success = jsonResponse.getBoolean("success");
 
@@ -108,8 +108,8 @@ public class LoginActivity extends Activity {
                                 Toast.makeText(getApplicationContext(), "비회원으로 접속합니다", Toast.LENGTH_SHORT).show();
                                 Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                                 startActivity(intent);
-                            }
-                            else {
+                            } else {
+                                setPreference("userid", "");
                                 Toast.makeText(getApplicationContext(), "서버 연결에 실패하였습니다", Toast.LENGTH_SHORT).show();
                             }
                         } catch (JSONException e) {
@@ -117,9 +117,9 @@ public class LoginActivity extends Activity {
                         }
                     }
                 };
-
                 Register register = new Register(sb.toString(), "비회원", "-", responseListener);
                 RequestQueue queue = Volley.newRequestQueue(LoginActivity.this);
+                setPreference("userid", sb.toString());
                 queue.add(register);
             }
         });
@@ -146,5 +146,19 @@ public class LoginActivity extends Activity {
         //페이스북 로그인 리턴값이 있을경우 보내준다.
         mCallbackManager.onActivityResult(requestCode, resultCode, data);
         super.onActivityResult(requestCode, resultCode, data);
+    }
+
+    //데이터 저장
+    public void setPreference(String key, String value){
+        SharedPreferences pref = getSharedPreferences("kr.taemin.urikiri", MODE_PRIVATE);
+        SharedPreferences.Editor editor = pref.edit();
+        editor.putString(key, value);
+        editor.commit();
+    }
+
+    // 데이터 불러오기
+    public String getPreferenceString(String key){
+        SharedPreferences pref = getSharedPreferences("kr.taemin.urikiri", MODE_PRIVATE);
+        return pref.getString(key, "");
     }
 }
