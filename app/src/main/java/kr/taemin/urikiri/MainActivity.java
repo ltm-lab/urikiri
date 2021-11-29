@@ -2,9 +2,13 @@ package kr.taemin.urikiri;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -20,6 +24,48 @@ public class MainActivity extends AppCompatActivity {
     //DemoCollectionAdapter demoCollectionAdapter;
     //ViewPager2 viewPager;
     //private int num =2;
+
+
+    //점 세개 메뉴 생성
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+
+        MenuInflater menuInflater = getMenuInflater();
+        menuInflater.inflate(R.menu.menu, menu);
+        return true;
+
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        switch (item.getItemId()) {
+            case R.id.action_settings:
+                Intent intent = new Intent(getApplicationContext(), AddFriendActivity.class);
+                startActivity(intent);
+                Toast.makeText(getApplicationContext(), "친구추가", Toast.LENGTH_LONG).show();
+                return true;
+
+            case R.id.action_settings2:
+
+                Toast.makeText(getApplicationContext(), "환경설정", Toast.LENGTH_LONG).show();
+                return true;
+
+            case R.id.action_settings3:
+
+                Toast.makeText(getApplicationContext(), "개인정보", Toast.LENGTH_LONG).show();
+                return true;
+
+            case R.id.action_settings4:
+
+                Toast.makeText(getApplicationContext(), "도움말", Toast.LENGTH_LONG).show();
+                return true;
+
+            default:
+                return super.onOptionsItemSelected(item);
+
+        }
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
