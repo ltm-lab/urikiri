@@ -44,6 +44,14 @@ public class LoginActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        final String userid = getPreferenceString("userid");
+
+        if(!userid.equals("")) {
+            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+            startActivity(intent);
+            finish();
+        }
+
         // 카카오 로그인 셋업
         kakao_login = (Button) findViewById(R.id.kakao_login);
 
@@ -105,9 +113,12 @@ public class LoginActivity extends Activity {
                             boolean success = jsonResponse.getBoolean("success");
 
                             if (success) {
+                                setPreference("userid", sb.toString());
                                 Toast.makeText(getApplicationContext(), "비회원으로 접속합니다", Toast.LENGTH_SHORT).show();
+                                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                                startActivity(intent);
+                                finish();
                             } else {
-                                setPreference("userid", "");
                                 Toast.makeText(getApplicationContext(), "서버 연결에 실패하였습니다", Toast.LENGTH_SHORT).show();
                             }
                         } catch (JSONException e) {
@@ -117,10 +128,7 @@ public class LoginActivity extends Activity {
                 };
                 Register register = new Register(sb.toString(), "비회원", "-", responseListener);
                 RequestQueue queue = Volley.newRequestQueue(LoginActivity.this);
-                setPreference("userid", sb.toString());
                 queue.add(register);
-                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                startActivity(intent);
             }
         });
     }
