@@ -24,7 +24,7 @@ public class FriendListActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_addfriend);
+        setContentView(R.layout.activity_friendlist);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_fl);
         setSupportActionBar(toolbar);

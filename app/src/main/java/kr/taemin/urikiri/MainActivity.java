@@ -41,9 +41,9 @@ public class MainActivity extends AppCompatActivity {
 
         switch (item.getItemId()) {
             case R.id.action_settings:
-                Intent intent = new Intent(getApplicationContext(), AddFriendActivity.class);
+                Intent intent = new Intent(getApplicationContext(),FriendListActivity.class);
                 startActivity(intent);
-                Toast.makeText(getApplicationContext(), "친구추가", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "친구목록", Toast.LENGTH_LONG).show();
                 return true;
 
             case R.id.action_settings2:
