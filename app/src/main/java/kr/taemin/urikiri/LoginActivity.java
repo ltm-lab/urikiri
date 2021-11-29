@@ -9,7 +9,9 @@ import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 
+import com.android.volley.RequestQueue;
 import com.android.volley.Response;
+import com.android.volley.toolbox.Volley;
 import com.facebook.CallbackManager;
 import com.facebook.login.LoginManager;
 import com.kakao.auth.AuthType;
@@ -103,10 +105,12 @@ public class LoginActivity extends Activity {
                             boolean success = jsonResponse.getBoolean("success");
 
                             if (success) {
-                                Toast.makeText(getApplicationContext(), "성공", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getApplicationContext(), "비회원으로 접속합니다", Toast.LENGTH_SHORT).show();
+                                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                                startActivity(intent);
                             }
                             else {
-                                Toast.makeText(getApplicationContext(), "실패", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getApplicationContext(), "서버 연결에 실패하였습니다", Toast.LENGTH_SHORT).show();
                             }
                         } catch (JSONException e) {
                             e.printStackTrace();
@@ -114,12 +118,9 @@ public class LoginActivity extends Activity {
                     }
                 };
 
-//                AddGroup addGroup = new AddGroup("타이틀", "서브타이틀", "멤버스1,멤버스2", responseListener);
-//                RequestQueue queue = Volley.newRequestQueue(LoginActivity.this);
-//                queue.add(addGroup);
-                Toast.makeText(getApplicationContext(), "토큰 : "+sb, Toast.LENGTH_SHORT).show(); //토스트로 생성된 토큰값을 보여준다.
-                Intent intent=new Intent(LoginActivity.this, MainActivity.class);
-                startActivity(intent);
+                Register register = new Register(sb.toString(), "비회원", "-", responseListener);
+                RequestQueue queue = Volley.newRequestQueue(LoginActivity.this);
+                queue.add(register);
             }
         });
     }
@@ -134,7 +135,6 @@ public class LoginActivity extends Activity {
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-
         // 카카오톡 간편로그인 실행 결과를 받아서 SDK로 전달
         if (Session.getCurrentSession().handleActivityResult(requestCode, resultCode, data)) {
             return;
