@@ -75,7 +75,7 @@ public class FriendListActivity extends AppCompatActivity {
             }
         };
 
-        Friends friends = new Friends("demoid", responseListener);
+        Friends friends = new Friends(userid, responseListener);
         RequestQueue queue = Volley.newRequestQueue(FriendListActivity.this);
         queue.add(friends);
 
