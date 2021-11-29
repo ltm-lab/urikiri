@@ -106,8 +106,6 @@ public class LoginActivity extends Activity {
 
                             if (success) {
                                 Toast.makeText(getApplicationContext(), "비회원으로 접속합니다", Toast.LENGTH_SHORT).show();
-                                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                                startActivity(intent);
                             } else {
                                 setPreference("userid", "");
                                 Toast.makeText(getApplicationContext(), "서버 연결에 실패하였습니다", Toast.LENGTH_SHORT).show();
@@ -121,6 +119,8 @@ public class LoginActivity extends Activity {
                 RequestQueue queue = Volley.newRequestQueue(LoginActivity.this);
                 setPreference("userid", sb.toString());
                 queue.add(register);
+                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                startActivity(intent);
             }
         });
     }

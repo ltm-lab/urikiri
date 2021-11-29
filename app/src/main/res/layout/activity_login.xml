@@ -26,13 +26,6 @@
             android:text="카카오 로그인"/>
 
         <Button
-            android:id="@+id/naver_login"
-            android:layout_width="match_parent"
-            android:layout_height="6dp"
-            android:layout_weight="1"
-            android:text="네이버 로그인"/>
-
-        <Button
             android:id="@+id/facebook_login"
             android:layout_width="match_parent"
             android:layout_height="6dp"

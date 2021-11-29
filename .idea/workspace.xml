@@ -14,7 +14,8 @@
   <component name="ChangeListManager">
     <list default="true" id="018f7e20-6e8e-41ad-9aa0-f38f7505cc96" name="Default Changelist" comment="fix content_add_group.xml">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/content_add_group.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/content_add_group.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/kr/taemin/urikiri/LoginActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/kr/taemin/urikiri/LoginActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,7 +25,7 @@
   <component name="CodeInsightWorkspaceSettings">
     <option name="optimizeImportsOnTheFly" value="true" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[C:\Users\sanshin\.android\avd\Pixel_2_API_30_1.avd]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[C:\Users\taemi\.android\avd\Nexus_5X_API_29_x86.avd]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -292,6 +293,12 @@
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Android App.app" />
+      <item itemvalue="Android App.MapActivity" />
+      <item itemvalue="Android App.LoginActivity" />
+      <item itemvalue="Android App.MainActivity" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Android App.MainActivity" />
